@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yanzhenjie.sofia.StatusView
+            android:id="@+id/status_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_333333" />
+
+        <LinearLayout
+            android:id="@+id/ly_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_2E2E30"
+            android:orientation="horizontal"
+            android:padding="@dimen/px20">
+
+            <com.flyco.roundview.RoundLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/px20"
+                app:rv_backgroundColor="@color/gray_8E8E9C"
+                app:rv_cornerRadius="@dimen/px30">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/home_a02" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/px20"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/search_video"
+                    android:maxLines="1"
+                    android:textColor="@color/gray_a1a1a1"
+                    android:textSize="@dimen/size26" />
+
+            </com.flyco.roundview.RoundLinearLayout>
+
+        </LinearLayout>
+
+
+        <com.yc.jianjiao.weight.LoadDataLayout
+            android:id="@+id/swipeLoadDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <cn.bingoogolapple.bgabanner.BGABanner
+                            android:id="@+id/banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="211dp"
+                            android:scaleType="fitXY"
+                            app:banner_isNeedShowIndicatorOnOnlyOnePage="false"
+                            app:banner_pageChangeDuration="2000"
+                            app:banner_pointContainerBackground="@android:color/transparent"
+                            app:banner_pointDrawable="@drawable/banner_selector"
+                            app:banner_pointTopBottomMargin="3dp"
+                            app:banner_transitionEffect="zoomStack" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            android:overScrollMode="never" />
+
+                    </LinearLayout>
+
+                </android.support.v4.widget.NestedScrollView>
+
+            </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+        </com.yc.jianjiao.weight.LoadDataLayout>
+
+    </LinearLayout>
+
+</layout>

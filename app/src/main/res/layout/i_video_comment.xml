@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/px15"
+    android:paddingTop="@dimen/px30"
+    android:id="@+id/ly_comment"
+    android:paddingRight="@dimen/px30"
+    android:paddingBottom="@dimen/px20"
+    android:background="?android:selectableItemBackground"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.yc.jianjiao.weight.CircleImageView
+        android:id="@+id/iv_head"
+        android:src="@mipmap/place_holder_user"
+        android:layout_width="@dimen/px76"
+        android:layout_height="@dimen/px76" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/px20"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            app:layout_constraintBottom_toTopOf="@+id/tv_time"
+            style="@style/Tv15black" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_ceng"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/px20"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            style="@style/Tv12gray" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_time"
+            app:layout_constraintLeft_toRightOf="@+id/tv_ceng"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            style="@style/Tv12gray" />
+
+        <android.support.v7.widget.AppCompatTextView
+            app:layout_constraintTop_toTopOf="@+id/tv_name"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_time"
+            android:id="@+id/tv_comment_size"
+            android:gravity="center"
+            android:drawablePadding="@dimen/px20"
+            android:layout_marginRight="@dimen/px30"
+            app:layout_constraintRight_toLeftOf="@+id/tv_zan"
+            android:drawableLeft="@mipmap/home_p01"
+            style="@style/Tv13black" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_zan"
+            android:text="0"
+            app:layout_constraintTop_toTopOf="@+id/tv_name"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_time"
+            android:gravity="center"
+            android:drawablePadding="@dimen/px20"
+            app:layout_constraintRight_toRightOf="parent"
+            android:drawableLeft="@mipmap/home_p02"
+            style="@style/Tv13black" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_marginLeft="@dimen/px10"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/px20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/tv_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time"
+            style="@style/Tv15black" />
+
+            <com.yc.jianjiao.weight.WithScrollListView
+                android:id="@+id/listView"
+                android:layout_marginTop="@dimen/px10"
+                android:background="@color/white_f4f4f4"
+                android:layout_width="match_parent"
+                android:divider="@null"
+                android:layout_marginLeft="@dimen/px10"
+                app:layout_constraintTop_toBottomOf="@+id/tv_content"
+                android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_look"
+            android:visibility="gone"
+            android:text="查看全部回复>"
+            android:layout_marginLeft="@dimen/px10"
+            android:layout_width="0dp"
+            android:textColor="@color/blue_4162A7"
+            android:background="@color/white_f4f4f4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="@dimen/px10"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/listView"
+            style="@style/Tv15black"
+            android:textSize="@dimen/size28"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

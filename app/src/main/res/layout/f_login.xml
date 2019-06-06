@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/px100">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/login_a01" />
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/fy_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px30"
+                    android:padding="@dimen/px30"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/back" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/ly_pp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px250"
+                    android:background="@mipmap/login_a07"
+                    android:orientation="vertical"
+                    android:padding="@dimen/px50"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_login"
+                        style="@style/Tv15orange"
+                        android:layout_gravity="center"
+                        android:text="@string/login" />
+
+                    <com.flyco.roundview.RoundLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px30"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/px30"
+                        app:rv_cornerRadius="@dimen/px10"
+                        app:rv_strokeColor="@color/white_f4f4f4"
+                        app:rv_strokeWidth="@dimen/px2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/login_a03" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/et_phone"
+                            android:maxLength="11"
+                            android:inputType="phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px30"
+                            android:background="@null"
+                            android:hint="@string/please_phone"
+                            android:textSize="@dimen/size28" />
+
+                    </com.flyco.roundview.RoundLinearLayout>
+
+                    <com.flyco.roundview.RoundLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px30"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/px30"
+                        app:rv_cornerRadius="@dimen/px10"
+                        app:rv_strokeColor="@color/white_f4f4f4"
+                        app:rv_strokeWidth="@dimen/px2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/login_a04" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/et_code"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px30"
+                            android:layout_weight="1"
+                            android:inputType="phone"
+                            android:maxLength="6"
+                            android:background="@null"
+                            android:hint="@string/please_code"
+                            android:textSize="@dimen/size28" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px30"
+                            android:background="@null"
+                            android:text="获取验证码"
+                            android:textColor="@color/orange_FF7D2D"
+                            android:textSize="@dimen/size28" />
+
+                    </com.flyco.roundview.RoundLinearLayout>
+
+                    <com.flyco.roundview.RoundLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px30"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/px30"
+                        app:rv_cornerRadius="@dimen/px10"
+                        app:rv_strokeColor="@color/white_f4f4f4"
+                        app:rv_strokeWidth="@dimen/px2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/login_a05" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/tv_invitation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/px30"
+                            android:background="@null"
+                            android:inputType="phone"
+                            android:hint="@string/please_invitation"
+                            android:textSize="@dimen/size28" />
+
+                    </com.flyco.roundview.RoundLinearLayout>
+
+                    <com.flyco.roundview.RoundTextView
+                        android:id="@+id/bt_submit"
+                        style="@style/RoundTextView"
+                        android:layout_marginTop="@dimen/px50"
+                        android:text="@string/login"
+                        app:rv_backgroundColor="@color/orange_FF7D2D"
+                        app:rv_cornerRadius="@dimen/px20" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ly_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px40"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ly_pp">
+
+                    <CheckBox
+                        android:id="@+id/cb_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/cb_select"
+                        android:paddingLeft="@dimen/px20"
+                        android:text="注册表示您同意"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/px24" />
+
+                    <TextView
+                        android:id="@+id/tv_agreement"
+                        style="@style/Tv12orange"
+                        android:text="《用户注册协议》" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_wx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px50"
+                    android:background="@mipmap/wechat"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/iv_qq"
+                    app:layout_constraintTop_toBottomOf="@+id/ly_agreement" />
+
+                <ImageView
+                    android:id="@+id/iv_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px50"
+                    android:background="@mipmap/qq"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_wx"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ly_agreement" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+</layout>

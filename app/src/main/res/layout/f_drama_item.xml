@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_top" />
+
+        <com.yc.jianjiao.weight.LoadDataLayout
+            android:id="@+id/swipeLoadDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_f4f4f4"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include
+                            layout="@layout/i_video_comment"
+                            android:background="@color/white" />
+
+                        <com.flyco.roundview.RoundTextView
+                            style="@style/Tv15black"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/px20"
+                            android:drawableLeft="@mipmap/home_m02"
+                            android:drawablePadding="@dimen/px10"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:padding="@dimen/px25"
+                            android:text="@string/all_reply"
+                            app:rv_backgroundColor="@color/white"
+                            app:rv_cornerRadius_TL="@dimen/px50"
+                            app:rv_cornerRadius_TR="@dimen/px50" />
+
+                        <com.yc.jianjiao.weight.WithScrollListView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            android:overScrollMode="never" />
+
+                    </LinearLayout>
+
+                </android.support.v4.widget.NestedScrollView>
+
+            </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+        </com.yc.jianjiao.weight.LoadDataLayout>
+
+    <View
+        style="@style/divider_dropshadow"/>
+
+    <LinearLayout
+        android:padding="@dimen/px20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.flyco.roundview.RoundFrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/px20"
+            app:rv_backgroundColor="@color/white_f4f4f4">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_text"
+                android:padding="@dimen/px20"
+                android:hint="@string/you_think"
+                android:textSize="@dimen/size30"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.flyco.roundview.RoundFrameLayout>
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/bt_submit"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:padding="@dimen/px20"
+            android:ems="4"
+            android:gravity="center"
+            app:rv_backgroundColor="@color/orange_FF7D2D"
+            app:rv_backgroundPressColor="@color/orange_FF6022"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

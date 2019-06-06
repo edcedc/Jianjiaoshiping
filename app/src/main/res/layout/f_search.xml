@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yanzhenjie.sofia.StatusView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_333333" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_2E2E30"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/px20">
+
+            <FrameLayout
+                android:id="@+id/fy_close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/px20"
+                    android:background="@mipmap/back" />
+
+            </FrameLayout>
+
+            <com.flyco.roundview.RoundLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/px15"
+                app:rv_backgroundColor="@color/black_57575A"
+                app:rv_cornerRadius="@dimen/px30">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/home_a02" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px20"
+                    android:background="@null"
+                    android:hint="@string/search_video"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_a1a1a1"
+                    android:textColorHint="@color/gray_a1a1a1"
+                    android:textSize="@dimen/size26" />
+
+                <ImageView
+                    android:id="@+id/iv_del_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/home_g01"
+                    android:visibility="gone" />
+
+            </com.flyco.roundview.RoundLinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_search"
+                style="@style/Tv15black"
+                android:layout_gravity="center"
+                android:padding="@dimen/px20"
+                android:text="搜索"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.yc.jianjiao.weight.SlidingTabLayout
+                    android:id="@+id/tb_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    tl:tl_indicator_color="@color/transparent"
+                    tl:tl_indicator_width="20dp"
+                    tl:tl_tab_padding="15dp"
+                    tl:tl_tab_space_equal="false"
+                    tl:tl_textSelectColor="@color/orange_FF7D2D"
+                    tl:tl_textUnselectColor="@color/gray_8E8E9C"
+                    tl:tl_textsize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white" />
+
+                <com.yc.jianjiao.weight.NoScrollViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_historical_records"
+                    style="@style/Tv15black"
+                    android:layout_margin="@dimen/px30"
+                    android:text="@string/historical_records"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/fy_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/px30"
+                    android:paddingLeft="@dimen/px50"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/Tv13gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@mipmap/home_f01"
+                        android:drawablePadding="@dimen/px20"
+                        android:text="@string/clear_historical" />
+
+                </FrameLayout>
+
+                <View
+                    android:id="@+id/view"
+                    style="@style/divider_1"
+                    android:layout_marginTop="@dimen/px30"
+                    app:layout_constraintTop_toBottomOf="@id/tv_historical_records" />
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/rv_historical_records"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px30"
+                    app:layout_constraintTop_toBottomOf="@id/view" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_hot_search"
+                    style="@style/Tv15black"
+                    android:layout_marginLeft="@dimen/px30"
+                    android:layout_marginTop="@dimen/px60"
+                    android:text="@string/hot_search"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_historical_records" />
+
+                <View
+                    android:id="@+id/view1"
+                    style="@style/divider_1"
+                    android:layout_marginTop="@dimen/px30"
+                    app:layout_constraintTop_toBottomOf="@id/tv_hot_search" />
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/rv_hot_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px30"
+                    app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

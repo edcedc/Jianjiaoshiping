@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ly_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_2E2E30"
+            android:orientation="horizontal"
+            android:padding="@dimen/px20">
+
+            <com.flyco.roundview.RoundLinearLayout
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/px15"
+                app:rv_backgroundColor="@color/black_57575A"
+                app:rv_cornerRadius="@dimen/px30">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/home_a02" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/px20"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/search_video"
+                    android:maxLines="1"
+                    android:textColorHint="@color/gray_a1a1a1"
+                    android:textColor="@color/gray_a1a1a1"
+                    android:textSize="@dimen/size26" />
+
+            </com.flyco.roundview.RoundLinearLayout>
+
+            <com.flyco.roundview.RoundLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px20"
+                android:padding="@dimen/px15"
+                android:visibility="visible"
+                app:rv_backgroundColor="@color/black_57575A"
+                app:rv_cornerRadius="@dimen/px30">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_screen"
+                    style="@style/Tv13orange"
+                    android:textColor="@color/white" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_screen2"
+                    android:layout_marginLeft="@dimen/px10"
+                    style="@style/Tv13orange"
+                    android:textColor="@color/white" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_all"
+                    style="@style/Tv13orange"
+                    android:layout_marginLeft="@dimen/px10"
+                    android:text="@string/all"
+                    android:textColor="@color/white" />
+
+            </com.flyco.roundview.RoundLinearLayout>
+
+        </LinearLayout>
+
+
+
+        <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_f4f4f4">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <cn.bingoogolapple.bgabanner.BGABanner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="211dp"
+                        android:scaleType="fitXY"
+                        app:banner_isNeedShowIndicatorOnOnlyOnePage="false"
+                        app:banner_pageChangeDuration="2000"
+                        app:banner_pointContainerBackground="@android:color/transparent"
+                        app:banner_pointDrawable="@drawable/banner_selector"
+                        app:banner_pointTopBottomMargin="3dp"
+                        app:banner_transitionEffect="defaultEffect" />
+
+                    <com.yc.jianjiao.weight.WithScrollGridView
+                        android:id="@+id/gridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:numColumns="4" />
+
+                    <com.flyco.roundview.RoundLinearLayout
+                        android:id="@+id/ly_look"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px20"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:rv_backgroundColor="@color/white"
+                        app:rv_cornerRadius_TL="@dimen/px40"
+                        app:rv_cornerRadius_TR="@dimen/px40">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/px20">
+
+                            <ImageView
+                                android:layout_width="@dimen/px50"
+                                android:layout_height="@dimen/px50"
+                                android:layout_marginRight="@dimen/px20"
+                                android:background="@mipmap/home_d04" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/Tv15black"
+                                android:layout_weight="1"
+                                android:text="@string/latest_point" />
+
+                        </LinearLayout>
+
+                        <com.yc.jianjiao.weight.WithScrollGridView
+                            android:id="@+id/gv_look"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:horizontalSpacing="@dimen/px10"
+                            android:numColumns="2" />
+
+                    </com.flyco.roundview.RoundLinearLayout>
+
+                    <com.flyco.roundview.RoundLinearLayout
+                        android:id="@+id/ly_dramatic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px20"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:rv_backgroundColor="@color/white"
+                        app:rv_cornerRadius_TL="@dimen/px40"
+                        app:rv_cornerRadius_TR="@dimen/px40">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/px20">
+
+                            <ImageView
+                                android:layout_width="@dimen/px50"
+                                android:layout_height="@dimen/px50"
+                                android:layout_marginRight="@dimen/px20"
+                                android:background="@mipmap/home_e02" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/Tv15black"
+                                android:layout_weight="1"
+                                android:text="@string/dramatic_appointment" />
+
+                        </LinearLayout>
+
+                        <com.yc.jianjiao.weight.WithScrollGridView
+                            android:id="@+id/gv_dramatic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:horizontalSpacing="@dimen/px10"
+                            android:numColumns="2" />
+
+                    </com.flyco.roundview.RoundLinearLayout>
+
+                    <com.flyco.roundview.RoundLinearLayout
+                        android:id="@+id/ly_like"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px20"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:rv_backgroundColor="@color/white"
+                        app:rv_cornerRadius_TL="@dimen/px40"
+                        app:rv_cornerRadius_TR="@dimen/px40">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/px20">
+
+                            <ImageView
+                                android:layout_width="@dimen/px50"
+                                android:layout_height="@dimen/px50"
+                                android:layout_marginRight="@dimen/px20"
+                                android:background="@mipmap/home_a17" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_title"
+                                style="@style/Tv15black"
+                                android:layout_weight="1"
+                                android:text="@string/you_like" />
+
+
+                        </LinearLayout>
+
+                        <com.yc.jianjiao.weight.WithScrollGridView
+                            android:id="@+id/gv_like"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:horizontalSpacing="@dimen/px10"
+                            android:numColumns="3" />
+
+                    </com.flyco.roundview.RoundLinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+
+        </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

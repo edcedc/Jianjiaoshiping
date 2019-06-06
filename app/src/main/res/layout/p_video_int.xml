@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:background="@color/white"
+        android:padding="@dimen/px20"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/Tv15black" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/delet_zhaopian_1x" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_fen"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            style="@style/Tv13orange"
+            android:layout_marginTop="@dimen/px10" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_content"
+            android:layout_marginTop="@dimen/px10"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fen"
+            style="@style/Tv12black" />
+
+        <ProgressBar
+            app:layout_constraintTop_toBottomOf="@+id/tv_content"
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:max="100"
+            android:progress="0" />
+
+        <com.yc.jianjiao.weight.X5WebView
+            android:id="@+id/webView"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

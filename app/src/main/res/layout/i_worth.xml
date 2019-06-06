@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="?android:selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/px30"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/place_holder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px340" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/tv_label"
+            android:visibility="gone"
+            android:paddingTop="@dimen/px5"
+            android:paddingBottom="@dimen/px5"
+            android:paddingLeft="@dimen/px10"
+            android:paddingRight="@dimen/px10"
+            android:textColor="@color/white"
+            android:layout_gravity="right"
+            app:rv_backgroundColor="@color/orange_FF7D2D"
+            android:textSize="@dimen/size20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_name"
+        android:layout_marginTop="@dimen/px10"
+        android:layout_marginLeft="@dimen/px20"
+        android:singleLine="true"
+        android:ellipsize="end"
+        style="@style/Tv15black" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_marginLeft="@dimen/px20"
+        android:id="@+id/tv_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        style="@style/Tv13gray" />
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?selectableItemBackground"
+    android:padding="@dimen/px20"
+    android:layout_height="wrap_content">
+
+    <com.yc.jianjiao.weight.CircleImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/iv_head"
+        android:src="@mipmap/place_holder_user"
+        android:layout_width="@dimen/px100"
+        android:layout_height="@dimen/px100" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        app:layout_constraintLeft_toRightOf="@+id/iv_head"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/px10"
+        android:layout_marginLeft="@dimen/px20"
+        style="@style/Tv15black"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_time"
+        app:layout_constraintTop_toTopOf="@+id/tv_title"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+        app:layout_constraintRight_toRightOf="parent"
+        style="@style/Tv12gray" />
+
+</android.support.constraint.ConstraintLayout>

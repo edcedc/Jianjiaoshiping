@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/px30"
+    android:background="?android:selectableItemBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.yc.jianjiao.weight.RoundImageView
+        android:id="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/place_holder"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_fen"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/px20"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_img"
+        android:textColor="@color/white"
+        style="@style/Tv15black" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/px10"
+        app:layout_constraintTop_toBottomOf="@+id/iv_img"
+        style="@style/Tv15black" />
+
+</android.support.constraint.ConstraintLayout>

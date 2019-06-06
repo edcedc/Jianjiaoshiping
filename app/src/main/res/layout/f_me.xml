@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:background="@color/white_f4f4f4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:paddingBottom="@dimen/px50"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/mine_a01" />
+
+                    <ImageView
+                        android:id="@+id/iv_set"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/px40"
+                        android:layout_marginTop="@dimen/px60"
+                        android:background="@mipmap/home_a11"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.flyco.roundview.RoundLinearLayout
+                        android:id="@+id/ly_me"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/px20"
+                        android:layout_marginRight="@dimen/px20"
+                        android:layout_marginTop="@dimen/px50"
+                        android:orientation="vertical"
+                        android:padding="@dimen/px20"
+                        app:layout_constraintTop_toTopOf="@+id/iv_head"
+                        app:rv_backgroundColor="@color/white"
+                        app:rv_cornerRadius="@dimen/px10">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_name"
+                            style="@style/Tv15black"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/px100" />
+
+                        <View
+                            style="@style/divider_1"
+                            android:layout_marginTop="@dimen/px30" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/px20">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/tv_remaining_movie"
+                                    android:text="0/0"
+                                    style="@style/Tv13orange"
+                                    android:textSize="@dimen/size40" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/Tv12gray"
+                                    android:layout_marginTop="@dimen/px20"
+                                    android:text="@string/remaining_movie" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/white_f4f4f4" />
+
+                            <LinearLayout
+                                android:id="@+id/ly_promote"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/px20">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/tv_to_promote"
+                                    android:text="已推广0人/还需0人"
+                                    style="@style/Tv12gray" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/Tv13orange"
+                                    android:layout_marginTop="@dimen/px20"
+                                    android:text="@string/to_promote"
+                                    android:textSize="@dimen/size40" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.flyco.roundview.RoundLinearLayout>
+
+                    <com.yc.jianjiao.weight.CircleImageView
+                        android:id="@+id/iv_head"
+                        android:layout_width="@dimen/px160"
+                        android:layout_height="@dimen/px160"
+                        android:src="@mipmap/place_holder_user"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_set" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+                <com.flyco.roundview.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/px20"
+                    android:orientation="vertical"
+                    app:rv_backgroundColor="@color/white"
+                    app:rv_cornerRadius="@dimen/px20">
+
+                    <com.yc.jianjiao.weight.WithScrollGridView
+                        android:id="@+id/gridView"
+                        android:layout_marginTop="@dimen/px30"
+                        android:layout_marginBottom="@dimen/px40"
+                        android:scrollbars="none"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4" />
+
+                </com.flyco.roundview.RoundLinearLayout>
+
+                <com.yc.jianjiao.weight.RoundImageView
+                    android:id="@+id/iv_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="107dp"
+                    android:layout_margin="@dimen/px20"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/place_holder" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/ly_historical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px20"
+                    android:background="?selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/px30"
+                    android:paddingLeft="@dimen/px40"
+                    android:paddingRight="@dimen/px40"
+                    android:paddingTop="@dimen/px30">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/Tv15black"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/y1"
+                        android:drawablePadding="@dimen/px20"
+                        android:text="@string/historical" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_historical"
+                        style="@style/Tv12gray"
+                        android:drawablePadding="@dimen/px40"
+                        android:drawableRight="@mipmap/home_a10"  />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/divider_1"
+                    android:layout_marginLeft="@dimen/px100"
+                    android:layout_marginRight="@dimen/px60" />
+
+                <LinearLayout
+                    android:id="@+id/ly_cache"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/px30"
+                    android:paddingLeft="@dimen/px40"
+                    android:paddingRight="@dimen/px40"
+                    android:paddingTop="@dimen/px30">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/Tv15black"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/home_a08"
+                        android:drawablePadding="@dimen/px20"
+                        android:text="@string/cache" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_cache"
+                        style="@style/Tv12gray"
+                        android:drawablePadding="@dimen/px40"
+                        android:drawableRight="@mipmap/home_a10"  />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/divider_1"
+                    android:layout_marginLeft="@dimen/px100"
+                    android:layout_marginRight="@dimen/px60" />
+
+                <LinearLayout
+                    android:id="@+id/ly_collection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/px30"
+                    android:paddingLeft="@dimen/px40"
+                    android:paddingRight="@dimen/px40"
+                    android:paddingTop="@dimen/px30">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/Tv15black"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/home_a09"
+                        android:drawablePadding="@dimen/px20"
+                        android:text="@string/my_collection" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_collection"
+                        style="@style/Tv12gray"
+                        android:drawablePadding="@dimen/px40"
+                        android:drawableRight="@mipmap/home_a10"  />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/divider_1"
+                    android:layout_marginLeft="@dimen/px100"
+                    android:layout_marginRight="@dimen/px60" />
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+</layout>

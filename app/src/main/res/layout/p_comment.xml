@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_f4f4f4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:padding="@dimen/px20"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Tv15black"
+                android:layout_weight="1"
+                android:text="@string/details" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/delet_zhaopian_1x" />
+
+        </LinearLayout>
+
+        <View style="@style/divider_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        layout="@layout/i_video_comment"
+                        android:background="@color/white" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px20"
+                        android:background="@color/white_f4f4f4" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/Tv15black"
+                        android:padding="@dimen/px20"
+                        android:gravity="center|left"
+                        android:drawableLeft="@mipmap/home_k10"
+                        android:text="@string/all_comments" />
+
+                    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+                        android:id="@+id/refreshLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+            <View style="@style/divider_dropshadow" />
+
+            <LinearLayout
+                android:id="@+id/bt_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/px20">
+
+                <com.flyco.roundview.RoundFrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px20"
+                    android:layout_weight="1"
+                    app:rv_backgroundColor="@color/white_f4f4f4">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/et_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/you_think"
+                        android:padding="@dimen/px20"
+                        android:textSize="@dimen/size30" />
+
+                </com.flyco.roundview.RoundFrameLayout>
+
+                <com.flyco.roundview.RoundTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="4"
+                    android:gravity="center"
+                    android:padding="@dimen/px20"
+                    android:text="@string/send"
+                    android:textColor="@color/white"
+                    app:rv_backgroundColor="@color/orange_FF7D2D"
+                    app:rv_backgroundPressColor="@color/orange_FF6022" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

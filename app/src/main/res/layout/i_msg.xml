@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/px15"
+    android:paddingRight="@dimen/px10"
+    android:paddingLeft="@dimen/px10"
+    android:background="?android:selectableItemBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rv_backgroundColor="@color/white"
+        android:paddingLeft="@dimen/px20"
+        android:paddingRight="@dimen/px20"
+        android:paddingTop="@dimen/px30"
+        android:paddingBottom="@dimen/px30"
+        app:rv_cornerRadius="@dimen/px20"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_marginRight="@dimen/px20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="@mipmap/home_i01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.yc.jianjiao.weight.CircleImageView
+                android:id="@+id/iv_circle"
+                android:visibility="gone"
+                android:src="@color/red"
+                android:layout_gravity="right"
+                android:layout_width="8dp"
+                android:layout_height="8dp" />
+
+        </FrameLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:maxLines="1"
+                android:ellipsize="end"
+                style="@style/Tv15black" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_time"
+                app:layout_constraintRight_toRightOf="parent"
+                style="@style/Tv12gray" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                style="@style/Tv13gray" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </com.flyco.roundview.RoundLinearLayout>
+
+</android.support.constraint.ConstraintLayout>

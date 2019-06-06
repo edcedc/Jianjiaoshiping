@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_top" />
+
+        <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/px30"
+                    android:paddingRight="@dimen/px30"
+                    android:paddingTop="@dimen/px50">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/Tv13orange"
+                        android:text="@string/questions_met"
+                        android:textSize="@dimen/size34" />
+
+                    <com.zhy.view.flowlayout.TagFlowLayout
+                        android:id="@+id/rv_label"
+                        app:max_select="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px30"
+                        android:padding="@dimen/px20" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/Tv13orange"
+                        android:layout_marginTop="@dimen/px40"
+                        android:text="@string/detailed"
+                        android:textSize="@dimen/size34" />
+
+                    <com.flyco.roundview.RoundLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px30"
+                        android:orientation="vertical"
+                        app:rv_cornerRadius="@dimen/px10"
+                        app:rv_strokeColor="@color/gray_a1a1a1"
+                        app:rv_strokeWidth="@dimen/px2">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/et_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:hint="@string/feed_back_hiht"
+                            android:minLines="7"
+                            android:padding="@dimen/px20"
+                            android:textSize="@dimen/size30" />
+
+                    </com.flyco.roundview.RoundLinearLayout>
+
+                    <com.flyco.roundview.RoundTextView
+                        android:id="@+id/bt_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px150"
+                        android:gravity="center"
+                        android:padding="@dimen/px20"
+                        android:text="@string/submit"
+                        android:textColor="@color/white"
+                        app:rv_backgroundColor="@color/orange_FF7D2D"
+                        app:rv_cornerRadius="@dimen/px20" />
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+    </LinearLayout>
+
+
+</layout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/px15"
+    android:paddingRight="@dimen/px10"
+    android:paddingLeft="@dimen/px10"
+    android:background="?android:selectableItemBackground">
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rv_backgroundColor="@color/white"
+        android:paddingLeft="@dimen/px20"
+        android:paddingRight="@dimen/px20"
+        android:paddingTop="@dimen/px30"
+        android:paddingBottom="@dimen/px30"
+        app:rv_cornerRadius="@dimen/px20"
+        android:orientation="horizontal">
+
+    <com.yc.jianjiao.weight.CircleImageView
+        android:id="@+id/iv_head"
+        android:layout_marginRight="@dimen/px20"
+        android:layout_width="@dimen/px88"
+        android:background="@mipmap/place_holder_user"
+        android:layout_height="@dimen/px88" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_name"
+                style="@style/Tv15black"
+                android:textColor="@color/blue_4162A7"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_time"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                style="@style/Tv12gray" />
+
+            <ImageView
+                app:layout_constraintTop_toTopOf="@+id/tv_name"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_time"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/iv_comment"
+                android:background="@mipmap/home_j02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_content"
+                android:layout_marginRight="@dimen/px20"
+                android:gravity="left"
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_img"
+                android:layout_marginTop="@dimen/px20"
+                app:layout_constraintRight_toLeftOf="@+id/iv_img"
+                app:layout_constraintTop_toBottomOf="@+id/tv_time"
+                style="@style/Tv13black" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_content2"
+                android:textColor="@color/blue_4162A7"
+                app:layout_constraintTop_toBottomOf="@+id/tv_content"
+                android:text="@string/reply_comments"
+                style="@style/Tv13black" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_comment"
+                android:layout_width="0dp"
+                android:layout_marginRight="@dimen/px20"
+                app:layout_constraintLeft_toRightOf="@+id/tv_content2"
+                app:layout_constraintRight_toLeftOf="@+id/iv_img"
+                app:layout_constraintTop_toBottomOf="@+id/tv_content"
+                style="@style/Tv13black" />
+
+            <ImageView
+                android:id="@+id/iv_img"
+                android:layout_marginTop="@dimen/px20"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_time"
+                android:background="@mipmap/place_holder"
+                android:layout_width="@dimen/px100"
+                android:layout_height="@dimen/px100" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </com.flyco.roundview.RoundLinearLayout>
+
+</android.support.constraint.ConstraintLayout>

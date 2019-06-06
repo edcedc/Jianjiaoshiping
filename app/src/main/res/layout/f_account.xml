@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_top" />
+
+        <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px20"
+                    android:background="?selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/px30"
+                    android:paddingLeft="@dimen/px40"
+                    android:paddingRight="@dimen/px40"
+                    android:paddingTop="@dimen/px30">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/Tv15black"
+                        android:layout_weight="1"
+                        android:text="@string/update_head" />
+
+                    <com.yc.jianjiao.weight.CircleImageView
+                        android:id="@+id/iv_head"
+                        android:layout_width="@dimen/px120"
+                        android:layout_height="@dimen/px120"
+                        android:src="@mipmap/place_holder_user" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/px20"
+                        android:background="@mipmap/home_a10" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/divider_1"
+                    android:layout_height="@dimen/px10" />
+
+
+                <LinearLayout
+                    android:id="@+id/ly_nick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px20"
+                    android:background="?selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/px30"
+                    android:paddingLeft="@dimen/px40"
+                    android:paddingRight="@dimen/px40"
+                    android:paddingTop="@dimen/px30">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/Tv15black"
+                        android:layout_weight="1"
+                        android:text="@string/nick" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_nick"
+                        style="@style/Tv13gray"
+                        android:drawablePadding="@dimen/px40"
+                        android:drawableRight="@mipmap/home_a10" />
+
+                </LinearLayout>
+
+                <View style="@style/divider_1" />
+
+                <LinearLayout
+                    android:id="@+id/ly_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px20"
+                    android:background="?selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/px30"
+                    android:paddingLeft="@dimen/px40"
+                    android:paddingRight="@dimen/px40"
+                    android:paddingTop="@dimen/px30">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/Tv15black"
+                        android:layout_weight="1"
+                        android:text="@string/phone_number" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_phone"
+                        style="@style/Tv13gray"
+                        android:drawablePadding="@dimen/px40"
+                        android:drawableRight="@mipmap/home_a10" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+    </LinearLayout>
+
+
+</layout>

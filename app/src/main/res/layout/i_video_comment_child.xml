@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/px15"
+    android:paddingTop="@dimen/px5"
+    android:paddingBottom="@dimen/px5"
+    android:paddingRight="@dimen/px30"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_content"
+        style="@style/Tv15black"
+        android:textSize="@dimen/size28"/>
+
+</android.support.constraint.ConstraintLayout>

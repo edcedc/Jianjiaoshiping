@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_f4f4f4"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_top" />
+
+        <com.yc.jianjiao.weight.LoadDataLayout
+            android:id="@+id/swipeLoadDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/mine_i01" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/bt_submit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/px50"
+                            android:background="@mipmap/mine_i02"
+                            android:gravity="center"
+                            android:padding="@dimen/px20"
+                            android:text="@string/click_add" />
+
+                        <com.flyco.roundview.RoundTextView
+                            style="@style/Tv15black"
+                            android:layout_width="match_parent"
+                            android:drawableLeft="@mipmap/mine_i03"
+                            android:drawablePadding="@dimen/px10"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:padding="@dimen/px25"
+                            android:text="@string/qq_qun"
+                            app:rv_backgroundColor="@color/white"
+                            app:rv_cornerRadius_TL="@dimen/px50"
+                            app:rv_cornerRadius_TR="@dimen/px50" />
+
+                        <com.yc.jianjiao.weight.WithScrollGridView
+                            android:id="@+id/gv_qq"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:numColumns="2"
+                            android:background="@color/white"
+                            android:horizontalSpacing="@dimen/px20"
+                            android:verticalSpacing="@dimen/px20" />
+
+                        <com.flyco.roundview.RoundTextView
+                            style="@style/Tv15black"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/px20"
+                            android:drawableLeft="@mipmap/mine_i05"
+                            android:drawablePadding="@dimen/px10"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:padding="@dimen/px25"
+                            android:text="@string/wx_qun"
+                            app:rv_backgroundColor="@color/white"
+                            app:rv_cornerRadius_TL="@dimen/px50"
+                            app:rv_cornerRadius_TR="@dimen/px50" />
+
+                        <com.yc.jianjiao.weight.WithScrollGridView
+                            android:id="@+id/gv_wx"
+                            android:background="@color/white"
+                            android:numColumns="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:horizontalSpacing="@dimen/px20"
+                            android:verticalSpacing="@dimen/px20" />
+
+
+                    </LinearLayout>
+
+                </android.support.v4.widget.NestedScrollView>
+
+            </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+        </com.yc.jianjiao.weight.LoadDataLayout>
+
+    </LinearLayout>
+
+</layout>

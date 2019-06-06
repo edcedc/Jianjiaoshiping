@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/px10"
+    android:paddingRight="@dimen/px10"
+    android:paddingTop="@dimen/px20"
+    android:paddingBottom="@dimen/px20"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_text"
+        android:layout_marginLeft="@dimen/px10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_head"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_head"
+        android:textSize="@dimen/size28"
+        style="@style/Tv15black" />
+
+    <com.yc.jianjiao.weight.CircleImageView
+        android:id="@+id/iv_head"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toRightOf="@+id/tv_text"
+        android:layout_marginLeft="@dimen/px20"
+        android:src="@mipmap/place_holder_user"
+        android:layout_width="@dimen/px100"
+        android:layout_height="@dimen/px100" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_name"
+        android:layout_marginLeft="@dimen/px20"
+        app:layout_constraintLeft_toRightOf="@+id/iv_head"
+        app:layout_constraintTop_toTopOf="@id/iv_head"
+        app:layout_constraintBottom_toTopOf="@+id/tv_time"
+        style="@style/Tv13black" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_time"
+        android:layout_marginLeft="@dimen/px20"
+        app:layout_constraintLeft_toRightOf="@+id/iv_head"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        app:layout_constraintBottom_toBottomOf="@id/iv_head"
+        style="@style/Tv12gray" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="@dimen/px30"
+        app:layout_constraintTop_toBottomOf="@+id/iv_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never" />
+
+</android.support.constraint.ConstraintLayout>

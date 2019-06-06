@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fy_video"
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_video_bill"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="240dp" />
+
+            <cn.bingoogolapple.bgabanner.BGABanner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:banner_isNeedShowIndicatorOnOnlyOnePage="false"
+                app:banner_pageChangeDuration="2000"
+                app:banner_pointContainerBackground="@android:color/transparent"
+                app:banner_pointDrawable="@drawable/banner_selector"
+                app:banner_pointTopBottomMargin="3dp"
+                app:banner_transitionEffect="zoomStack" />
+
+            <com.shuyu.gsyvideoplayer.video.GSYSampleADVideoPlayer
+                android:visibility="visible"
+                android:id="@+id/videoPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue_4162A7" />
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/tv_video_bill"
+                android:text="视频广告"
+                android:visibility="gone"
+                android:padding="@dimen/px5"
+                android:textColor="@color/white"
+                app:rv_cornerRadius="@dimen/px20"
+                android:textSize="@dimen/size20"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/px20"
+                app:rv_backgroundColor="@color/gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:visibility="visible"
+                android:id="@+id/fy_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/px30">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/px30"
+                    android:background="@mipmap/home_k01" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fy_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingTop="@dimen/px30"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/px30"
+                    android:background="@mipmap/home_k02" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <com.yc.jianjiao.weight.LoadDataLayout
+            android:id="@+id/swipeLoadDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="blocksDescendants"
+                        android:paddingTop="@dimen/px30">
+
+                        <com.flyco.roundview.RoundTextView
+                            android:id="@+id/tv_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/px30"
+                            android:paddingLeft="@dimen/px5"
+                            android:paddingRight="@dimen/px5"
+                            android:textColor="@color/orange_FF7D2D"
+                            android:textSize="@dimen/size24"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tv_title"
+                            app:rv_strokeColor="@color/orange_FF7D2D"
+                            app:rv_strokeWidth="@dimen/px1" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_title"
+                            style="@style/Tv15black"
+                            android:layout_marginLeft="@dimen/px30"
+                            android:textSize="@dimen/size36"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_label"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_label"
+                            app:layout_constraintTop_toTopOf="@+id/tv_label" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_fen"
+                            style="@style/Tv13orange"
+                            android:layout_marginRight="@dimen/px30"
+                            android:drawablePadding="@dimen/px20"
+                            android:drawableRight="@mipmap/home_k09"
+                            android:textSize="@dimen/size36"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_label"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tv_label" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_content"
+                            style="@style/Tv15gray"
+                            android:layout_width="0dp"
+                            android:layout_margin="@dimen/px30"
+                            android:textSize="@dimen/size28"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_label" />
+
+                        <View
+                            android:id="@+id/view"
+                            style="@style/divider_1"
+                            android:layout_marginTop="@dimen/px30"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_anthology"
+                            style="@style/Tv15black"
+                            android:layout_marginLeft="@dimen/px30"
+                            android:layout_marginTop="@dimen/px50"
+                            android:text="@string/anthology"
+                            android:textSize="@dimen/size34"
+                            android:visibility="gone"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                        <com.yc.jianjiao.weight.OrientationAwareRecyclerView
+                            android:id="@+id/rv_anthology"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/px20"
+                            android:visibility="gone"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_anthology" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white_f4f4f4"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@+id/rv_anthology">
+
+                            <com.flyco.roundview.RoundTextView
+                                style="@style/Tv15black"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="@dimen/px20"
+                                android:drawableLeft="@mipmap/home_a17"
+                                android:drawablePadding="@dimen/px10"
+                                android:gravity="center|left"
+                                android:orientation="vertical"
+                                android:padding="@dimen/px25"
+                                android:text="@string/you_like"
+                                app:rv_backgroundColor="@color/white"
+                                app:rv_cornerRadius_TL="@dimen/px50"
+                                app:rv_cornerRadius_TR="@dimen/px50" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rv_like"
+                                android:background="@color/white"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:nestedScrollingEnabled="false"
+                                android:overScrollMode="never" />
+
+                            <com.flyco.roundview.RoundTextView
+                                style="@style/Tv15black"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="@dimen/px20"
+                                android:drawableLeft="@mipmap/home_k10"
+                                android:drawablePadding="@dimen/px10"
+                                android:gravity="center|left"
+                                android:orientation="vertical"
+                                android:padding="@dimen/px25"
+                                android:text="@string/comment_area"
+                                app:rv_backgroundColor="@color/white"
+                                app:rv_cornerRadius_TL="@dimen/px50"
+                                app:rv_cornerRadius_TR="@dimen/px50" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rv_comment"
+                                android:background="@color/white"
+                                android:nestedScrollingEnabled="false"
+                                android:overScrollMode="never"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </android.support.v4.widget.NestedScrollView>
+
+            </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+        </com.yc.jianjiao.weight.LoadDataLayout>
+
+
+        <View style="@style/divider_dropshadow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/px20">
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/tv_comment"
+                style="@style/Tv13gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:padding="@dimen/px20"
+                android:text="@string/you_think"
+                app:rv_backgroundColor="@color/white_f4f4f4"
+                app:rv_cornerRadius="@dimen/px30" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_share"
+                style="@style/Tv12black"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/px10"
+                android:drawableTop="@mipmap/home_k14"
+                android:gravity="center"
+                android:text="@string/share" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_collection"
+                style="@style/Tv12black"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/px10"
+                android:drawableTop="@mipmap/home_a09"
+                android:gravity="center"
+                android:text="@string/collection" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_download"
+                style="@style/Tv12black"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/px10"
+                android:drawableTop="@mipmap/home_k16"
+                android:gravity="center"
+                android:text="@string/download" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fy_pop"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_pop"
+                android:alpha="0.4"
+                android:background="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.flyco.roundview.RoundLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="60dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:rv_backgroundColor="#ffffff"
+                app:rv_cornerRadius="5dp">
+
+                <TextView
+                    android:text="观看次数已无"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/px50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px40"
+                    android:layout_marginRight="@dimen/px40"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/px30"
+                    android:text="推广获得更多观看次数 "
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px40"
+                    android:layout_marginRight="@dimen/px40"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/bt_pop_submit"
+                    android:background="@color/orange_FF7D2D"
+                    android:textColor="@color/white"
+                    android:ems="10"
+                    android:layout_marginBottom="@dimen/px50"
+                    android:layout_marginTop="@dimen/px50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="确定"
+                    android:textSize="12sp" />
+
+            </com.flyco.roundview.RoundLinearLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</layout>

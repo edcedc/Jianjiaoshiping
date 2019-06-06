@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/px20"
+        android:paddingRight="@dimen/px20"
+        android:paddingTop="@dimen/px20"
+        android:paddingBottom="@dimen/px50">
+
+        <com.yc.jianjiao.weight.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/px90"
+            android:layout_height="@dimen/px90"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/place_holder_user" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/Tv15black"
+            android:layout_marginLeft="@dimen/px20"
+            app:layout_constraintLeft_toRightOf="@+id/iv_head"
+            app:layout_constraintTop_toTopOf="@+id/iv_head" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_nick"
+            style="@style/Tv12gray"
+            android:layout_marginLeft="@dimen/px20"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_head"
+            app:layout_constraintLeft_toRightOf="@+id/iv_head"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_content"
+            style="@style/Tv15black"
+            android:layout_marginTop="@dimen/px20"
+            app:layout_constraintTop_toBottomOf="@+id/iv_head" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_content2"
+            style="@style/Tv15gray"
+            android:textSize="@dimen/size28"
+            app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+
+        <com.yc.jianjiao.weight.X5WebView
+            android:id="@+id/webView"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"  />
+
+        <com.yc.jianjiao.weight.WithScrollGridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px40"
+            android:horizontalSpacing="@dimen/px10"
+            android:numColumns="3"
+            android:verticalSpacing="@dimen/px10"
+            app:layout_constraintTop_toBottomOf="@+id/webView" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/tv_label"
+            android:layout_marginTop="@dimen/px10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/px10"
+            android:paddingRight="@dimen/px10"
+            android:textSize="@dimen/size20"
+            android:textColor="@color/orange_FF7D2D"
+            app:layout_constraintTop_toBottomOf="@+id/gridView"
+            app:rv_strokeColor="@color/orange_FF7D2D"
+            app:rv_strokeWidth="@dimen/px2" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_comment"
+            style="@style/Tv13black"
+            android:layout_marginTop="@dimen/px20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/home_p01"
+            android:drawablePadding="@dimen/px20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tv_zan"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_zan"
+            style="@style/Tv13black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/home_p02"
+            android:layout_marginTop="@dimen/px20"
+            android:drawablePadding="@dimen/px20"
+            app:layout_constraintLeft_toRightOf="@+id/tv_comment"
+            app:layout_constraintRight_toLeftOf="@+id/tv_share"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_share"
+            style="@style/Tv13black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/home_p03"
+            android:layout_marginTop="@dimen/px20"
+            android:drawablePadding="@dimen/px20"
+            app:layout_constraintLeft_toRightOf="@+id/tv_zan"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

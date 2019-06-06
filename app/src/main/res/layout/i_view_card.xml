@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true">
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <ImageView
+           android:id="@+id/iv_img"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:scaleType="centerCrop"
+           android:src="@mipmap/place_holder"/>
+
+       <com.flyco.roundview.RoundTextView
+           android:text="立即选片"
+           app:rv_strokeWidth="@dimen/px2"
+           app:rv_cornerRadius="@dimen/px10"
+           app:rv_backgroundColor="@color/white"
+           android:textSize="@dimen/size24"
+           android:layout_gravity="bottom|right"
+           android:paddingLeft="@dimen/px10"
+           android:paddingRight="@dimen/px10"
+           android:layout_margin="@dimen/px20"
+           android:textColor="@color/orange_FF7D2D"
+           app:rv_strokeColor="@color/orange_FF7D2D"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+   </FrameLayout>
+
+</android.support.v7.widget.CardView>

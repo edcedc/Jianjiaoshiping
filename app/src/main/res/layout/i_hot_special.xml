@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white_f4f4f4"
+    android:paddingTop="@dimen/px20"
+    android:paddingLeft="@dimen/px20"
+    android:paddingRight="@dimen/px20"
+    android:layout_height="wrap_content">
+
+    <com.flyco.roundview.RoundFrameLayout
+        app:rv_cornerRadius="@dimen/px20"
+        app:rv_backgroundColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.yc.jianjiao.weight.WithScrollGridView
+            android:id="@+id/gridView"
+            android:numColumns="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.flyco.roundview.RoundFrameLayout>
+
+</android.support.constraint.ConstraintLayout>

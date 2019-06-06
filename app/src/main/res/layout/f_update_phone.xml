@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_top" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/px100">
+
+                <com.flyco.roundview.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px100"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/px30"
+                    app:rv_cornerRadius="@dimen/px10"
+                    app:rv_strokeColor="@color/white_f4f4f4"
+                    app:rv_strokeWidth="@dimen/px2">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_a03" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/px30"
+                        android:background="@null"
+                        android:hint="@string/please_phone"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:textSize="@dimen/size28" />
+
+                </com.flyco.roundview.RoundLinearLayout>
+
+                <com.flyco.roundview.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px80"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/px30"
+                    app:rv_cornerRadius="@dimen/px10"
+                    app:rv_strokeColor="@color/white_f4f4f4"
+                    app:rv_strokeWidth="@dimen/px2">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/login_a04" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/px30"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/please_code"
+                        android:inputType="phone"
+                        android:textSize="@dimen/size28" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/px30"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:text="获取验证码"
+                        android:textColor="@color/orange_FF7D2D"
+                        android:textSize="@dimen/size28" />
+
+                </com.flyco.roundview.RoundLinearLayout>
+
+
+                <com.flyco.roundview.RoundTextView
+                    android:id="@+id/bt_submit"
+                    style="@style/RoundTextView"
+                    android:layout_marginTop="@dimen/px200"
+                    android:text="@string/save_phone"
+                    app:rv_backgroundColor="@color/orange_FF7D2D"
+                    app:rv_cornerRadius="@dimen/px20" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+</layout>

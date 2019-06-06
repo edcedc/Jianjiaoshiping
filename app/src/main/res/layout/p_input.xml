@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/px50"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/white"
+            android:padding="@dimen/px20"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_text"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_f4f4f4"
+                android:gravity="top"
+                android:hint="@string/speak_comments"
+                android:maxLength="20"
+                android:minLines="3"
+                android:padding="@dimen/px20"
+                android:textSize="@dimen/size30" />
+
+            <FrameLayout
+                android:id="@+id/bt_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px20"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_text">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/Tv15black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/px2"
+                    android:background="@color/white_f4f4f4"
+                    android:ems="4"
+                    android:gravity="center"
+                    android:padding="@dimen/px20"
+                    android:text="@string/send" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_size"
+                style="@style/Tv15black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px30"
+                android:gravity="center"
+                android:maxLength="23"
+                android:text="0/20"
+                app:layout_constraintBottom_toBottomOf="@+id/bt_submit"
+                app:layout_constraintRight_toLeftOf="@+id/bt_submit"
+                app:layout_constraintTop_toBottomOf="@+id/et_text"
+                app:layout_constraintTop_toTopOf="@+id/bt_submit" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.yc.jianjiao.weight.LoadDataLayout
+        android:id="@+id/swipeLoadDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+        </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+    </com.yc.jianjiao.weight.LoadDataLayout>
+
+</layout>

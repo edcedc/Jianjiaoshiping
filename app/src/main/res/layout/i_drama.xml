@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/px20"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/tv_title"
+        android:paddingTop="@dimen/px10"
+        android:paddingBottom="@dimen/px10"
+        android:paddingLeft="@dimen/px20"
+        android:visibility="gone"
+        android:paddingRight="@dimen/px20"
+        android:layout_marginRight="@dimen/px20"
+        app:rv_cornerRadius="@dimen/size30"
+        style="@style/Tv15black" />
+
+    <com.yc.jianjiao.weight.OrientationAwareRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

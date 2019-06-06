@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="@dimen/px20"
+       android:orientation="vertical">
+
+       <View
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           android:layout_weight="1"/>
+
+        <com.flyco.roundview.RoundLinearLayout
+            app:rv_cornerRadius="@dimen/px20"
+            app:rv_backgroundColor="@color/white"
+            android:layout_width="match_parent"
+            android:padding="@dimen/px20"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:text="@string/share"
+                android:textSize="@dimen/size34"
+                android:layout_gravity="center"
+                style="@style/Tv15black" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/px50"
+                android:layout_marginBottom="@dimen/px50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/home_l02"
+                    android:text="微信好友"
+                    style="@style/Tv12black" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/home_l03"
+                    android:text="朋友圈"
+                    style="@style/Tv12black" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/home_l04"
+                    android:text="QQ好友"
+                    style="@style/Tv12black" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/home_l05"
+                    android:text="微博"
+                    style="@style/Tv12black" />
+
+            </LinearLayout>
+
+        </com.flyco.roundview.RoundLinearLayout>
+
+       <com.flyco.roundview.RoundTextView
+           android:id="@+id/bt_cancel"
+           android:layout_marginTop="@dimen/px20"
+           app:rv_backgroundColor="@color/white"
+           app:rv_cornerRadius="@dimen/px20"
+           android:text="@string/cancel"
+           android:textSize="@dimen/size32"
+           android:gravity="center"
+           android:padding="@dimen/px20"
+           android:textColor="@color/black_333333"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+   </LinearLayout>
+
+</layout>

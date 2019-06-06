@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <com.yc.jianjiao.weight.LoadDataLayout
+            android:id="@+id/swipeLoadDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_2E2E30"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/px50">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.yc.jianjiao.weight.SlidingTabLayout
+                        android:id="@+id/tb_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        tl:tl_indicator_color="@color/transparent"
+                        tl:tl_indicator_width="20dp"
+                        tl:tl_tab_padding="15dp"
+                        tl:tl_tab_space_equal="false"
+                        tl:tl_textSelectColor="@color/orange_FF7D2D"
+                        tl:tl_textUnselectColor="@color/gray_8E8E9C"
+                        tl:tl_textsize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/px20"
+                        android:layout_marginRight="@dimen/px20"
+                        android:background="@mipmap/home_a01" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/add_z21"/>
+
+                <com.yc.jianjiao.weight.NoScrollViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </com.yc.jianjiao.weight.LoadDataLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/px50"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/include_home_drawer" />
+
+    </android.support.v4.widget.DrawerLayout>
+</layout>

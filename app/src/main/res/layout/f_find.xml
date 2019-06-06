@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+    </data>
+
+    <com.yc.jianjiao.weight.LoadDataLayout
+        android:id="@+id/swipeLoadDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.yanzhenjie.sofia.StatusView
+                android:id="@+id/status_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black_333333" />
+
+            <com.yc.jianjiao.weight.SlidingTabLayout
+                android:id="@+id/tb_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/black_333333"
+                tl:tl_indicator_color="@color/transparent"
+                tl:tl_indicator_width="20dp"
+                tl:tl_tab_padding="15dp"
+                tl:tl_tab_space_equal="false"
+                tl:tl_textSelectColor="@color/orange_FF7D2D"
+                tl:tl_textUnselectColor="@color/gray_8E8E9C"
+                tl:tl_textsize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/ly_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black_2E2E30"
+                android:orientation="horizontal"
+                android:padding="@dimen/px20">
+
+                <com.flyco.roundview.RoundLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/px20"
+                    app:rv_backgroundColor="@color/gray_8E8E9C"
+                    app:rv_cornerRadius="@dimen/px30">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/home_a02" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/px20"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/search_video"
+                        android:maxLines="1"
+                        android:textColor="@color/gray_a1a1a1"
+                        android:textSize="@dimen/size26" />
+
+                </com.flyco.roundview.RoundLinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/white" />
+
+            <com.yc.jianjiao.weight.NoScrollViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </com.yc.jianjiao.weight.LoadDataLayout>
+
+</layout>

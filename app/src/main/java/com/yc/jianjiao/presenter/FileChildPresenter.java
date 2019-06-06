@@ -1,0 +1,113 @@
+package com.yc.jianjiao.presenter;
+
+import android.os.Handler;
+
+import com.lzy.okgo.model.Response;
+import com.yc.jianjiao.bean.BaseListBean;
+import com.yc.jianjiao.bean.BaseResponseBean;
+import com.yc.jianjiao.bean.DataBean;
+import com.yc.jianjiao.callback.Code;
+import com.yc.jianjiao.controller.CloudApi;
+import com.yc.jianjiao.view.impl.FileChildContract;
+
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+
+/**
+ * Created by edison on 2019/1/28.
+ */
+
+public class FileChildPresenter extends FileChildContract.Presenter{
+    @Override
+    public void onRequest(int pagerNumber, String id) {
+        List<String> listId = new ArrayList<>();
+        listId.add(id);
+        CloudApi.videoPageSearch(pagerNumber, listId, null)
+                .doOnSubscribe(new Consumer<Disposable>() {
+                    @Override
+                    public void accept(Disposable disposable) throws Exception {
+                    }
+                })
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<Response<BaseResponseBean<BaseListBean<DataBean>>>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        mView.addDisposable(d);
+                    }
+
+                    @Override
+                    public void onNext(Response<BaseResponseBean<BaseListBean<DataBean>>> baseResponseBeanResponse) {
+                        if (baseResponseBeanResponse.body().code == Code.CODE_SUCCESS){
+                            BaseListBean<DataBean> data = baseResponseBeanResponse.body().data;
+                            if (data != null){
+                                List<DataBean> list = data.getList();
+                                if (list != null && list.size() != 0){
+                                    mView.setData(list);
+                                    mView.setRefreshLayoutMode(data.getTotalRow());
+                                    mView.hideLoading();
+                                }else {
+                                    mView.showLoadEmpty();
+                                }
+                            }
+                        }else {
+                            mView.showLoadEmpty();
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        mView.onError(e);
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+    @Override
+    public void onCollect(final int i, String id, int isCollect) {
+        isCollect = isCollect == 0 ? 1 : 0;
+        final int finalIsCollect = isCollect;
+        CloudApi.videoSaveCollect(id, isCollect)
+                .doOnSubscribe(new Consumer<Disposable>() {
+                    @Override
+                    public void accept(Disposable disposable) throws Exception {
+                        mView.showLoading();
+                    }
+                })
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<JSONObject>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        mView.addDisposable(d);
+                    }
+
+                    @Override
+                    public void onNext(JSONObject jsonObject) {
+                        if (jsonObject.optInt("code") == Code.CODE_SUCCESS){
+                            mView.setCollect(i, finalIsCollect);
+                        }
+//                        showToast(jsonObject.optString("desc"));
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        mView.onError(e);
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        mView.hideLoading();
+                    }
+                });
+    }
+}

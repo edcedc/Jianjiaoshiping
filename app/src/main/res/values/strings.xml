@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name">香蕉视讯</string>
+    <string name="setting">设置</string>
+    <string name="resume">Resume</string>
+    <string name="cancel">取消</string>
+    <string name="title_dialog">Tips</string>
+    <string name="not_wx_pay">您未安装最新版本微信，不支持微信支付，请安装或升级微信版本</string>
+    <string name="message_permission_rationale">授予下列权限以继续程序:\n\n%1$s</string>
+    <string name="message_overlay_failed">您的电话不允许我们使用其他应用程序.</string>
+    <string name="message_permission_always_failed">我们需要以下权限，请在设置中为我们开启：\n\n%1$s</string>
+
+    <!--提示语-->
+    <string name="error_phone">手机号码格式错误</string>
+    <string name="error_phone1">手机号码或验证码为空</string>
+    <string name="error_">请输入完整</string>
+    <string name="error_nickname">请输入您的昵称</string>
+    <string name="error_pwd_length">密码位于6~16位</string>
+    <string name="please_phone">请输入手机号码</string>
+    <string name="please_code">请输入验证码</string>
+    <string name="please_pwd1">请再次输入密码</string>
+    <string name="please_pwd2">两次密码不一致</string>
+    <string name="please_invitation">请输入邀请码（选填）</string>
+    <string name="error_1">请阅读协议</string>
+    <string name="submit">提交</string>
+    <string name="submit2">保存</string>
+    <string name="submit3">确定</string>
+    <string name="submit4">确定绑定</string>
+    <string name="error_text_length">输入不能为空或者字数太长</string>
+
+    <!-- 登录-->
+    <string name="bing_login">绑定手机号</string>
+    <string name="login">登录</string>
+
+
+    <!--首页-->
+    <string name="selected">精选</string>
+    <string name="search_video">搜索热门视频</string>
+    <string name="barrage_area">弹幕区</string>
+    <string name="send_barrage">发送弹幕</string>
+    <string name="screen">筛选</string>
+    <string name="all">全部</string>
+    <string name="send">发送</string>
+    <string name="speak_comments">说出你的评论</string>
+    <string name="category_classification">类目分类</string>
+    <string name="category_classification2">常用类目分类</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="drama_series">剧集</string>
+    <string name="hot_broadcast">正在热播</string>
+    <string name="what_is">什么值得看</string>
+    <string name="you_like">猜你喜欢</string>
+    <string name="latest_point">最新看点</string>
+    <string name="classification">分类栏</string>
+    <string name="dramatic_appointment">大剧约起来</string>
+
+    <!--搜索-->
+    <string name="historical_records">历史记录</string>
+    <string name="hot_search">热门搜索</string>
+    <string name="clear_historical">清空历史</string>
+
+    <!--消息-->
+    <string name="msg">消息</string>
+    <string name="reply_comments">回复我的评论：</string>
+    <string name="zan_comments">点赞了我的评论：</string>
+    <string name="system_msg"> 系统消息</string>
+
+    <!--视频详情-->
+    <string name="anthology">选集</string>
+    <string name="comment_area">评论区</string>
+    <string name="you_think">说出你的感想</string>
+    <string name="share">分享</string>
+    <string name="collection">收藏</string>
+    <string name="download">下载</string>
+    <string name="cache_selection">缓存选集</string>
+    <string name="all_election">全选</string>
+    <string name="view_cache">查看缓存</string>
+    <string name="all_comments">全部评论</string>
+
+    <!--热门频道-->
+    <string name="hot_video">热门推荐</string>
+    <string name="hot_title">热门专题</string>
+    <string name="popularity_list">人气榜</string>
+    <string name="star_album">明星专辑</string>
+    <string name="dynamic_details">动态详情</string>
+    <string name="details">详情</string>
+    <string name="all_floors">全部楼层</string>
+    <string name="all_reply">全部回复</string>
+
+    <!--我的-->
+    <string name="remaining_movie">今日剩余观影次数</string>
+    <string name="remaining_movie2">今日可观影次数</string>
+    <string name="remaining_movie3">剩余观影次数</string>
+    <string name="to_promote">去推广</string>
+    <string name="my_promote">我要推广</string>
+    <string name="feedback">意见反馈</string>
+    <string name="my_msg">我的消息</string>
+    <string name="communication">火爆交流群</string>
+    <string name="historical">历史记录</string>
+    <string name="cache">我的缓存</string>
+    <string name="my_collection">我的收藏</string>
+    <string name="account_management">账号管理</string>
+    <string name="clear_cache">清理缓存</string>
+    <string name="sign_out">退出登录</string>
+    <string name="set">设置</string>
+    <string name="update_head">修改头像</string>
+    <string name="nick">个人昵称 </string>
+    <string name="phone_number">手机号</string>
+    <string name="save_nick">保存昵称</string>
+    <string name="save_phone">修改手机号</string>
+    <string name="zking">二维码</string>
+    <string name="immediate_promotion">立即推广</string>
+    <string name="my_promotion">我要推广</string>
+    <string name="promotion">推广</string>
+    <string name="my_promotion2">我的推广</string>
+    <string name="promotion_sharing">推广分享获得观影次数</string>
+    <string name="save_zking">保存二维码</string>
+    <string name="copy_promotion">复制推广链接</string>
+    <string name="more_ways">更多方式 ></string>
+    <string name="questions_met">我遇见的问题</string>
+    <string name="detailed">详细描述（必填）</string>
+    <string name="feed_back_hiht">请尽量详细描述问题，以便我们及时为您解决 （10-100字）</string>
+    <string name="clear">删除</string>
+    <string name="historical_record">历史纪录</string>
+    <string name="edit">编辑</string>
+    <string name="click_add">点击加入</string>
+    <string name="qq_qun">QQ群号</string>
+    <string name="wx_qun">微信二维码</string>
+
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_top" />
+
+        <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout"
+                android:background="@mipmap/mine_d01"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/px40"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_name"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/px50"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:text="@string/promotion_sharing"
+                    android:textSize="@dimen/size38"
+                    android:textColor="@color/white"
+                    style="@style/Tv12gray" />
+
+                <ImageView
+                    android:id="@+id/iv_img"
+                    android:layout_marginTop="@dimen/px40"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:background="@mipmap/mine_d02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                
+                <ImageView
+                    android:id="@+id/iv_zking"
+                    app:layout_constraintTop_toTopOf="@+id/iv_img"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_img"
+                    app:layout_constraintLeft_toLeftOf="@+id/iv_img"
+                    app:layout_constraintRight_toRightOf="@+id/iv_img"
+                    android:src="@mipmap/place_holder"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_code"
+                    android:layout_marginTop="@dimen/px20"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_zking"
+                    style="@style/Tv15black" />
+
+                <com.flyco.roundview.RoundTextView
+                    android:id="@+id/tv_save_zking"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_img"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/px20"
+                    app:rv_strokeWidth="@dimen/px2"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_copy_promotion"
+                    app:rv_strokeColor="@color/gray_a1a1a1"
+                    app:rv_cornerRadius="@dimen/px10"
+                    android:text="@string/save_zking"
+                    android:ems="7"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/px40"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.flyco.roundview.RoundTextView
+                    android:id="@+id/tv_copy_promotion"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_save_zking"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_img"
+                    android:textColor="@color/white"
+                    android:ems="7"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/px40"
+                    android:padding="@dimen/px20"
+                    app:rv_strokeWidth="@dimen/px2"
+                    app:rv_strokeColor="@color/gray_a1a1a1"
+                    app:rv_cornerRadius="@dimen/px10"
+                    android:text="@string/copy_promotion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_more"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_save_zking"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/px40"
+                    android:textColor="@color/white"
+                    android:text="@string/more_ways"
+                    android:textSize="@dimen/size34"
+                    style="@style/Tv15black" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+    </LinearLayout>
+
+</layout>

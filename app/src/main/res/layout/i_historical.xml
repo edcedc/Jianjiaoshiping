@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:paddingBottom="@dimen/px20"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_img"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/place_holder"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px200" />
+
+    <CheckBox
+        android:id="@+id/cb"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/px20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="           "
+        android:background="@null"
+        android:button="@drawable/cb_select2"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/iv_img"
+        android:layout_marginTop="@dimen/px10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/px10"
+        style="@style/Tv15black"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/px10"
+        style="@style/Tv13gray"/>
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/tv_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/px20"
+        android:visibility="visible"
+        android:paddingTop="@dimen/px5"
+        android:paddingBottom="@dimen/px5"
+        android:paddingLeft="@dimen/px10"
+        android:paddingRight="@dimen/px10"
+        android:textColor="@color/white"
+        android:layout_gravity="right"
+        app:rv_backgroundColor="@color/orange_FF7D2D"
+        android:textSize="@dimen/size20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>
