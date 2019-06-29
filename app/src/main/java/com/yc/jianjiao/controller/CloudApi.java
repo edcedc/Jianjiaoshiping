@@ -36,8 +36,8 @@ public class CloudApi {
 
     private static final String url =
 //            "39.104.66.84";
-            "103.253.13.162";
-//            "finet.asuscomm.com:8082";
+//            "103.253.13.162";
+            "finet.asuscomm.com:8082";
 
 /*    public static final String SERVLET_IMG_URL = "http://" +
             url;*/
