@@ -34,7 +34,7 @@ public class PopupWindowTool {
     public static final int clear_cache = 4; //清除缓存
     public static final int confirm_payment = 5; //是否确定支付
     public static final int sign_out= 6; //退出
-    public static final int report= 7; //举报
+        public static final int report= 7; //举报
 
 
     public static void showDialog(final Context act, final int type, final DialogListener listener){
